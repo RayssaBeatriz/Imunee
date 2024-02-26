@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <title>Meu CID</title>
+</head>
+<body>
+  {%extends 'menu.html'%}
+  {%block conteudo%}
+      <main class="container">
+        <section class="cima">
+            <h1>Meu CID</h1>
+            <div class="direita">
+                <img src="/static/assets/img/notification.svg" alt="">
+                <p>{{current_user.nome}}</p>
+                <img src="/static/assets/img/seta.svg" alt="">
+            </div>
+
+            <div class="box">
+               <div class="ola">
+                    <h3>Bem-vindo,{{current_user.nome}}!</h3>
+                    <p>Aqui Estão Todas as Informações de Suas Vacinas</p>
+               </div>
+                <img src="/static/assets/img/Enthusiastic-rafiki 1.png" alt="">
+            </div>
+
+            <nav class="ancoras">
+                <ul>
+                    <li class="item"><a href="/dashboard">Histórico</a></li>
+                    <li class="item"><a href="/vacinas">Vacinas</a></li>
+                    <li class="item"><a href="/locais">Locais</a></li>
+                    <li class="item"><a href="#">Perfil</a></li>
+        </section>
+
+        <section class="baixo">
+            <div class="esquerda">
+                <img src="/static/assets/img/Group 10.png" alt="vacina">
+                <span class="tipo">Vacina contra o sarampo</span>
+                <span class="dose">1 dose</span>
+                <span class="data">10/05/2023</span>
+            </div>
+            <div class="esquerda">
+                <img src="/static/assets/img/Group 10.png" alt="vacina">
+                <span class="tipo">Vacina contra o sarampo</span>
+                <span class="dose">1 dose</span>
+                <span class="data">10/05/2023</span>
+            </div>
+            <div class="esquerda">
+                <img src="/static/assets/img/Group 10.png" alt="vacina">
+                <span class="tipo">Vacina contra o sarampo</span>
+                <span class="dose">1 dose</span>
+                <span class="data">10/05/2023</span>
+            </div>
+            <div class="esquerda">
+                <img src="/static/assets/img/Group 10.png" alt="vacina">
+                <span class="tipo">Vacina contra o sarampo</span>
+                <span class="dose">1 dose</span>
+                <span class="data">10/05/2023</span>
+            </div>
+
+            <div class="direita">
+                <h2>Meu CID</h2>
+                <div class="carteira">
+                    <div class="titulo">
+                        <p class="nome">Reforço</p>
+                        <p class="data">10/05/2023</p>
+                    </div>
+                    <div class="info">
+                        <p class="info1">Fabricante</p>
+                        <p class="info2">Instituto Buntantan</p>
+                    </div>
+                    <div class="info">
+                        <p class="info1">Local</p>
+                        <p class="info2">1293 - Policilna Norte II - Natal/RN</p>
+                    </div>
+                    <div class="info">
+                        <p class="info1">Vacinador</p>
+                        <p class="info2">102934</p>
+                    </div>
+                    <div class="lote">
+                        <p class="info4">Lote</p>
+                        <p class="info5">21039</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </main>
+   {%endblock%}
+</body>
+</html>

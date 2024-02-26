@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/vacinasPa.css">
+    <title>Minhas Vacinas</title>
+</head>
+<body>
+  {%extends 'menu.html'%}
+  {%block conteudo%}
+    <main class="container">
+        <section class="cima">
+            <h1>Vacinas</h1>
+            <div class="direita">
+                <img src="/static/assets/img/notification.svg" alt="icone de notificações">
+                <p>{{current_user.nome}}</p>
+                <img src="/static/assets/img/seta.svg" alt="icone de seta">
+            </div>
+
+            <nav class="ancoras">
+                <ul>
+                    <li class="item"><a href="/dashboard">Histórico</a></li>
+                    <li class="item"><a href="/vacinas">Vacinas</a></li>
+                    <li class="item"><a href="/locais">Locais</a></li>
+                    <li class="item"><a href="#">Perfil</a></li>
+        </section>
+
+        <section class="dowload">
+            <span class="box-down">
+                <h3>Carteira Nacional de Vacinação</h3>
+                <a href="#"><img src="/static/assets/img/dowload.svg" alt="icone de dowload">Exportar Documento</a>
+            </span>
+        </section>
+
+        <section class="baixo">
+           <a class="adicionar" href="/cavacinas"><img src="/static/assets/img/adicionar.svg" alt="icone de adicionar">Adicionar Vacinas</a>
+
+            <div class= "vacina">
+                {% for e in estoque %}  
+                    <div class="vacinas"> 
+                        <img src="/static/assets/img/Group 10.png" alt="imagem de vacina">
+                        <li>
+                          <p class = "tipo">{{e.nome}}</h3> 
+                          <p class="dose">{{e.tempo_dose}}</p></br> 
+                          <p class="data">{{e.data_vencimento}}</p></br>
+                          <p class = "local">{{e.local_vacina}}</p></br>
+                          {% if e.disponivel == 1 %}
+                            <p class="p4">Sim</p></br>  
+                          {% endif %}
+                          {% if e.disponivel == 0 %}
+                            <p class="p4">Não</p></br>  
+                          {% endif %}
+                          <a class="editar" href="/estoque/update/{{e.id}}">EDITAR</a> 
+                          <a class="excluir" href="/estoque/delete/{{e.id}}">DELETAR</a>
+                        </li>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+  {%endblock%}
+</body>
+</html>

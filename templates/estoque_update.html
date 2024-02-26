@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/static/css/cadastro.css">
+      <link rel="icon" type="image/png" href="/static/assets/img/favicon-16x16.png">
+      <title>Study-cadastro</title>
+  </head>
+  <body>
+    <section class="main-cadastro">
+        <div class="left-cadastro">
+            <h1>Modifique seus dados <br> do CID </h1>
+            <img src="/static/assets/svg-cadastro.svg" class="left-image" alt="imagem login">
+        </div>
+        <div class="right-cadastro">
+              <div class="card-cadastro">
+                  <form action="/estoque/update/{{estoque.id}}" method="post">
+                      <h1>Mude os dados</h1>
+                      <div class="textfield-2">
+                          <label for="nome">Nome</label>
+                          <input type="text"  id="nome" name="nome" value="{{estoque.nome}}" placeholder="Nome">
+                      </div>
+                      <div class="textfield-2">
+                          <label for="observacao">E-mail</label>
+                          <input type="text" id="observacao" name="observacao" value="{{estoque.observacao}}" placeholder="observacao" >
+                      </div>
+                      <div class="textfield-2">
+                          <label for="tempo_dose">Tempo de Intervalo para Dose</label>
+                          <input type="text" id="tempo_dose" name="tempo_dose" value="{{estoque.tempo_dose}}" placeholder="Tempo para próxima dose">
+                      </div>
+                      <div class="textfield-2">
+                          <label for="local_vacina">Local de Vacinação:</label>
+                          <input type="text" id="senha" name="local_vacina" value="{{estoque.local_vacina}}" placeholder="Digite o local de vacina">
+                      </div>
+                      <div class="textfield-2">
+                        <label for="disponivel">Vacina Disponível:</label>
+                        <input type="radio"  id = "disponivel" name="disponivel" value="Sim">Sim<br><br>
+                        <input type="radio"  id = "disponivel"name="disponivel" value="Não">Não<br><br>
+                          <label for="local"
+                      </div>
+                      <input class="btn-cadastro" type="submit" value="confirmar">
+                  </form>
+              </div>
+        </div>
+    </section>
+    <footer class="rodape">
+        <p>© 2022 Site desenvolvido pela study - Criadora de Métodos de Estudos | IFRN</p>
+    </footer>
+  </body>
+</html>

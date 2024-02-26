@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/cadastroVa.css">
+    <title>Cadastro de Vacinas</title>
+</head>
+<body>
+  {%extends 'menu.html'%}
+  {%block conteudo%}
+    <main class="container">
+        <section class="cima">
+            <h1>Vacinas</h1>
+            <div class="direita">
+                <img src="/static/assets/img/notification.svg" alt="icone de notificações">
+                <p>{{current_user.nome}}</p>
+                <img src="/static/assets/img/seta.svg" alt="icone de seta">
+            </div>
+
+            <nav class="ancoras">
+                <ul>
+                    <li class="item"><a href="/dashboard">Histórico</a></li>
+                    <li class="item"><a href="/vacinas">Vacinas</a></li>
+                    <li class="item"><a href="/locais">Locais</a></li>
+                    <li class="item"><a href="#">Perfil</a></li>
+        </section>
+
+        <section class="baixo">
+            <a class="adicionar" href="#"><img src="/static/assets/img/adicionar.svg" alt="icone de adicionar">Adicionar Vacinas</a>
+
+            <section class="card">
+                <section class="esquerda">
+                    <h2>Carteira Vacinal Digital</h2>
+                    <img src="/static/assets/img/seringa.png" alt="imagem de vacinas">
+                </section>
+                <section class="direita">
+                    <form action="/estoque/create" method="post">
+                        <h1>Cadastro de Vacinas</h1>
+                        <div class="textfield-2">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite o Nome da Vacina...">
+                        </div>
+                        <div class="textfield-2">
+                            <label for="observacao">Observação</label>
+                            <input type="text"  id="observacao" name="observacao" placeholder="Digite observações sobre a vacina...">
+                        </div>
+                        <div class="textfield-2">
+                            <label for="tempo_dose">Tempo de intervalo</label>
+                            <input type="text"  id="tempo_dose" name="tempo_dose" placeholder="Digite o intervalo das doses da vacina...">
+                        </div>
+                        <div class="textfield-3">
+                            <label for="data_vencimento">Data de vencimento</label>
+                            <input type="date"  id="data_vencimento" name="data_vencimento" placeholder="Digite a data do vencimento da vacina...">
+                        </div>
+                        <div class="textfield-3">
+                            <label for="local_vacina">Local</label>
+                            <input type="text" id="local_vacina" name="local_vacina" placeholder="Digite o local da vacinação...">
+                        </div>
+                        <div class="textfield-3">
+                            <label for="disponivel">Disponível</label>
+                            <select id="disponivel" name="disponivel">
+                              <option value=0>Disponível</option>
+                              <option value=1>Indisponível</option>
+                            </select>
+                        </div>
+
+                        <input class="btn-cadastro" type="submit" value="Cadastrar">
+                    </form>
+                </section>
+            </section>
+        </section>
+    </main>
+  {%endblock%}
+</body>
+</html>

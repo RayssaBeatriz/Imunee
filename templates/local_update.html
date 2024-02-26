@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/static/css/localUPdate.css">
+      <link rel="icon" type="image/png" href="/static/assets/img/favicon-16x16.png">
+      <title>Local - UPDATE</title>
+  </head>
+  <body>
+    <section class="main-cadastro">
+        <div class="left-cadastro">
+            <h1>Modifique os dados<br> do <span>Local de vacinação</span> </h1>
+        </div>
+        <div class="right-cadastro">
+              <div class="card-cadastro">
+                  <form action="/local/update/{{local.id}}" method="post">
+                      <h1>Mude os dados</h1>
+                      <div class="textfield-2">
+                          <label for="local">Local</label>
+                          <input type="text"  id="nome" name="nome_local" value="{{local.nome_local}}">
+                      </div>
+                      <div class="textfield-2">
+                          <label for="endereco">Endereço</label>
+                          <input type="text" id="endereco" name="endereco" value="{{local.endereco}}">
+                      </div>
+                      <input class="btn-local" type="submit" value="confirmar">
+                  </form>
+              </div>
+        </div>
+    </section>
+    <footer class="rodape">
+        <p>© 2022 Site desenvolvido pela study - Criadora de Métodos de Estudos | IFRN</p>
+    </footer>
+  </body>
+</html>

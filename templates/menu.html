@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/menu.css">
+    <title>menu</title>
+</head>
+<body>
+    <section class="menu-box">
+        <img class="logo" src="/static/assets/img/Frame 3.svg" alt="logotipo">
+        <img  class="perfil" src="/static/assets/img/Ellipse 2 (2).png" alt="perfil">
+
+        <nav class="menu">
+            <ul>
+                <li class="item"><a href="/dashboard"><img src="/static/assets/img/dashboard2.svg" alt="">Meu CID</a></li>
+                <li class="item"><a href="/estoque/recovery"><img src="/static/assets/img/Vacina3.svg" alt="">Vacinas</a></li>
+                <li class="item"><a href="/locais"><img src="/static/assets/img/locais3.svg" alt="">Locais</a></li>
+                <li class="item"><a href="#"><img src="/static/assets/img/meu.svg" alt="">Meu Perfil</a></li>
+                <li class="sair"><a href="{{url_for('usuarios.logoff')}}"><img src="/static/assets/img/log out2.svg" alt="">Sair</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+
+    <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/cadastroEn.css">
+    <title>cadastro - Enfermeiro</title>
+</head>
+<body>
+    <section class="esquerda">
+        <h1>Bem-vindo ao <span>Imunee!</span></h1>
+        <img src="/static/assets/img/Medicine-bro 1.png" alt="">
+    </section>
+    <section class="direita">
+        <div class="card">
+            <form action="/enfermeiros/create" method="post">
+                <h1>Crie sua conta</h1>
+                <div class="textfield-2">
+                    <input type="text"  id="enfermeiro" name="nome" placeholder="Digite Seu Nome...">
+                    <img src="/static/assets/img/Group 4.svg" alt="">
+                </div>
+                <div class="textfield-2">
+                    <input type="number" id="Nregistro" name="Nregistro" placeholder="Digite Seu e-CIP...">
+                    <img src="/static/assets/img/🦆 icon _verify_.svg" alt="">
+                </div>
+                <div class="textfield-2">
+                    <input type="email" id="email" name="email" placeholder="Digite Seu E-mail...">
+                    <img src="/static/assets/img/email.svg" alt="">
+                </div>
+              <div class="textfield-2">
+                    <input type="password" id="senha" name="senha" placeholder="Digite Sua Senha...">
+                    <img src="/static/assets/img/password (1).svg" alt="">
+              </div>
+              <div class="textfield-2">
+                    <input type="password" id="csenha" name="senha2" placeholder="Confirmar Sua Senha...">
+                    <img src="/static/assets/img/password (1).svg" alt="">
+            </div>
+            <a href="#">esqueceu a senha?</a>
+                <input class="btn-cadastro" type="submit" value="Cadastrar">
+              
+            </form>
+        </div>
+
+       <div class="link">
+            <a href="/">Página Inicial</a>
+            <a href="#">Login</a>
+       </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CID - Deletar</title>
+  <link rel="stylesheet" href="/static/css/local_delete.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Excluir Assunto</h1>
+        <div class="box">
+          <img src="/static/assets/img/yes-or-no-animate (1).svg" alt="imagem">
+          <p> Você tem certeza que deseja excluir o local: {{local.id}} </p>
+          <form method='post' action='/local/delete/{{local.id}}'>
+            <input type="submit" value="Sim">
+          </form>
+          <a href="/materia">Cancelar</a>
+        </div>
+    </section>
+</body>

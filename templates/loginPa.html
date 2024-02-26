@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/logink.css">
+    <title>Login - Paciente</title>
+</head>
+<body>
+    <section class="esquerda">
+        <h1>Seu Documento <span>Imunee!</span></h1>
+    </section>
+    <section class="direita">
+        <img src="/static/assets/img/Fingerprint-pana 1.png" alt="imagem">
+        <form action="/usuarios/autenticar" method="post">
+            <h1>Login</h1>
+            <div class="textfield-2">
+                <input type="email" id="email" name="email" placeholder="Digite Seu E-mail">
+                <img src="/static/assets/img/email.svg" alt="usuário">
+            </div>
+            <div class="textfield-2">
+                <input type="password" id="senha" name="senha" placeholder="Digite Sua Senha">
+                <img src="/static/assets/img/password (1).svg" alt="cadeado">
+            </div>
+            <a href="#">esqueceu a senha?</a>
+            
+            <input class="btn-cadastro" type="submit" value="Entrar">
+        </form>
+
+        <div class="link">
+            <a href=/>Página Inicial</a>
+            <a href="/cadastro">Cadastre-se</a>
+       </div>
+    </section>
+</body>
+</html>

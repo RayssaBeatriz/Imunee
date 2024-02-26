@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/locaisCa.css">
+    <title>Locais - Cadastro</title>
+</head>
+<body>
+  {%extends 'menu.html'%}
+  {%block conteudo%}
+    <main class="container">
+        <section class="cima">
+            <h1>Locais</h1>
+            <div class="direita">
+                <img src="/static/assets/img/notification.svg" alt="icone de notificações">
+                <p>{{current_user.nome}}</p>
+                <img src="/static/assets/img/seta.svg" alt="icone de seta">
+            </div>
+
+            <nav class="ancoras">
+                <ul>
+                    <li class="item"><a href="/dashboard">Histórico</a></li>
+                    <li class="item"><a href="/vacinas">Vacinas</a></li>
+                    <li class="item"><a href="/locais">Locais</a></li>
+                    <li class="item"><a href="#">Perfil</a></li>
+        </section>
+
+        <a class="adicionar" href="#"><img src="/static/assets/img/adicionar.svg" alt="icone de adicionar">Adicionar Locais</a>
+
+        <section class="baixo-box">
+            <div class= "local">
+                {% for l in local %}  
+                    <div class="locais"> 
+                        <img src="/static/assets/img/local.png" alt="imagem de local">
+                        <span class="nome">{{l.nome}}</span> 
+                        <span class="endereco">{{l.endereco}}</span>
+                        <a class= 'excluir' href="/vacina/update/{{v.id}}">Excluir</a> 
+                        <a class= 'editar'href="/vacina/delete/{{v.id}}">Editar</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="baixo-direita">
+            <div class="card">
+                <form action="/local/create" method="post">
+                    <h1>Cadastro de Locais</h1>
+                    <div class="textfield-2">
+                        <label for="nome_local">Nome do local</label>
+                        <input type="text"  id="nome_local" name="nome_local" placeholder="Digite o nome do local...">
+                    </div>
+                    <div class="textfield-2">
+                        <label for="Endereco">Endereço</label>
+                        <input type="text"  id="endereco" name="endereco" placeholder="Digite o Local da Vacinação...">
+                    </div>
+                    <a class="maps" id="maps" name="maps">Anexar Local do Mapa</a>
+                    <input class="btn-cadastro" type="submit" value="Cadastrar">
+                </form>
+            </div>
+        </section>
+    </main>
+  {%endblock%}
+</body>
+</html>

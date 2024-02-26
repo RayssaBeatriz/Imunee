@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/static/assets/img/favicon-16x16.png">
+  <title>Estoque</title>
+</head>
+<body>
+  <main>
+      <section class="main-enfermeiros">
+        <h1>Estoque de vacinas</h1>
+        <ul>
+      	{% for e in estoque %}
+      		<li>
+            <h3>{{e.nome}}</h3> 
+            <p class="p1">{{e.id}}</p> </br> 
+            <p class="p2">{{e.tempo_dose}}</p></br> 
+            <p class="p3">{{e.observacao}}</p></br> 
+            <p class="p4">{{e.data_vencimento}}</p></br>
+            <p class="p3">{{e.local_vacina}}</p></br>
+            {% if e.disponivel == 1 %}
+              <p class="p4">Sim</p></br>  
+            {% endif %}
+            {% if e.disponivel == 0 %}
+              <p class="p4">Não</p></br>  
+            {% endif %}
+            <a style="text-decoration:none" class="a1" href="/estoque/update/{{e.id}}">EDITAR</a> 
+            <a class="a2" style="text-decoration:none" href="/estoque/delete/{{e.id}}">DELETAR</a>
+          </li> 
+      	{% endfor %}
+        </ul>
+      </section>
+  </main>
+</body>
+</html>

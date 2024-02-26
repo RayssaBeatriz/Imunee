@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/static/assets/img/favicon-16x16.png">
+  <title>Local de vacinação</title>
+</head>
+<body>
+  <main>
+      <section class="main-enfermeiros">
+        <h1>Local de vacinação</h1>
+        <ul>
+      	{% for l in local %}
+      		<li>
+            <h3>{{l.nome_local}}</h3> 
+            <p class="p1">{{l.id}}</p>
+            <p class="p2">{{l.endereco}}</p></br> 
+            <a style="text-decoration:none" class="a1" href="/local/update/{{l.id}}">EDITAR</a> 
+            <a class="a2" style="text-decoration:none" href="/local/delete/{{l.id}}">DELETAR</a>
+          </li> 
+      	{% endfor %}
+        </ul>
+      </section>
+  </main>
+</body>
+</html>

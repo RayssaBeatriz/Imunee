@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.esquerda{
+    position: relative;
+    width: 720px;
+    height: 100vh;
+    background: #13293D;
+}
+
+.esquerda >h1{
+    position: relative;
+    top: 124px;
+    left: 86px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.esquerda > h1> span{
+    color: #A6C72A;
+    font-family: poppins;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.esquerda > img{
+    position: absolute;
+    top: 281px;
+    left: 75px;
+}
+
+.direita{
+    position: absolute;
+    top: 126px;
+    right: 330px;
+}
+
+.direita .card{
+    width: 516px;
+    height: 640px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card > form > h1{
+    position: absolute;
+    top: 43px;
+    left: 100px;
+    color: #455A64;
+    font-family: Poppins;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.textfield-2{
+  margin-top: 23px;
+  position: relative;
+    top: 110px;
+    left: 54px;
+}
+
+.textfield-2 > input{
+    width: 407px;
+    height: 60px;
+    border-radius: 8px;
+    border: 2px solid #3F6990;
+    background: #FFF;
+}
+
+.textfield-2 > input::placeholder{
+    color: rgba(78, 106, 120, 0.80);
+    font-family: nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+    padding-left: 20px;
+}
+
+.textfield-2 > img{
+    position: relative;
+    top: 10px;
+    right: 55px;
+}
+
+.card > form > a{
+    position: relative;
+    top: 136px;
+    left: 54px;
+    color: #006494;
+    font-family: nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+}
+
+.btn-cadastro{
+    position: relative;
+    top: 136px;
+    left: 204px;
+    width: 120px;
+    height: 42px;
+    border-radius: 8px;
+    background: rgba(119, 173, 120, 0.90);
+    color: #0B0B0B;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    cursor: pointer;
+}
+
+.btn-cadastro:hover{
+    background: rgba(118, 184, 119, 0.9);
+}
+
+.link{
+    position: relative;
+    top: 140px;
+    left: 550px;
+    display: inline-flex;
+    align-items: center;
+    gap: 33px;
+}
+
+.link > a{
+    color: rgba(78, 106, 120, 0.80);
+    font-family: nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+    text-decoration: none;
+}
+
+.link > a:hover{
+    color: #006494;
+}
